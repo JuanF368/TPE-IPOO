@@ -38,8 +38,6 @@ $arrayPasajeros=["Nombre", "Apellido", "Documento", "Telefono"];
                 $telefono=trim(fgets(STDIN));
                 $newObjPasaj=new pasajero($nombre, $apellido, $nroDoc, $telefono);
                 array_push($arrayPasajeros, $newObjPasaj);
-                //new Pasajero ($nombre, $apellido, $nroDoc, $telefono);
-                //array_push($arrayPasajeros, $newObjPasaj);
             break;
             case 2:
                 echo "Ingrese su numero de documento para poder modificar sus datos:\n";
@@ -50,19 +48,21 @@ $arrayPasajeros=["Nombre", "Apellido", "Documento", "Telefono"];
                     $i++;
                 }
                 if ($i<$n){
-                    
+                    echo "Ingrese el nuevo nombre: ";
+                    $newNombre=trim(fgets(STDIN));
+                    echo "Ingrese el nuevo Apellido: ";
+                    $newApellido=trim(fgets(STDIN));
+                    echo "Ingrese el nuevo Telefono: ";
+                    $newTelefono=trim(fgets(STDIN));
+                    $pasajero->modificacion($newNombre, $newApellido, $newTelefono);
                 }else{
                     echo "Este pasajero no existe en la base de datos";
                 }
-                echo "Ingrese el nuevo nombre: \n";
-                $nuevoNom=trim(fgets(STDIN));
-                echo "Ingrese el nuevo apellido: \n";
-                $nuevoApe=trim(fgets(STDIN));
-                echo "Ingrese el nuevo telefono: \n";
-                $nuevoTel=trim(fgets(STDIN));
             break;
             case 3:
-
+                echo "Ingrese su numero de documento para mostrar sus datos: ";
+                $nroDocPasaj=trim(fgets(STDIN));
+                
             break;
         }
 

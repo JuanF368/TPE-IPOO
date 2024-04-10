@@ -46,7 +46,7 @@ class ResponsableV{
 
 
     //metodo para devolver los valores de los atributos
-    public function __toString(){
+    public function __toStringResponsable(){
         return
         "\n Nro. de Empleado: ".$this->getNumEmpl().
         "\n Nro. de Licencia: ".$this->getNumLic().

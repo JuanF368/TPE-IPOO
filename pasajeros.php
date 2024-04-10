@@ -52,7 +52,7 @@ class Pasajeros{
 
 
     //metodo para mostrar los valores de pasajero
-    public function __toString(){
+    public function __toStringPasajero(){
         return 
         "\n Nombre: ".$this->getNombre().
         "\n Apellido: ".$this->getApellido().
